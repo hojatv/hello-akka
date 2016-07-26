@@ -11,15 +11,20 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 public class HelloAkkaJava {
-    public static class Greet implements Serializable {}
+    public static class Greet implements Serializable {
+    }
+
     public static class WhoToGreet implements Serializable {
         public final String who;
+
         public WhoToGreet(String who) {
             this.who = who;
         }
     }
+
     public static class Greeting implements Serializable {
         public final String message;
+
         public Greeting(String message) {
             this.message = message;
         }

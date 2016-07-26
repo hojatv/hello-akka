@@ -1,6 +1,11 @@
 import akka.actor.{ ActorRef, ActorSystem, Props, Actor, Inbox }
 import scala.concurrent.duration._
 
+/*
+* In Scala case classes and case objects make excellent messages since they are immutable and have support for pattern matching,
+* something we will take advantage of in the Actor when matching on the messages it has received. Another advantage case classes
+* has is that they are marked as serializable by default.
+*/
 case object Greet
 case class WhoToGreet(who: String)
 case class Greeting(message: String)
